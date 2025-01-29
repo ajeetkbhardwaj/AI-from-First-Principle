@@ -1,6 +1,8 @@
 
 # Questions and Answers
 
+![alt text](image.png)
+
 ## Q: What is Markdown?
 **A:** Markdown is a lightweight markup language with plain text formatting syntax.
 
