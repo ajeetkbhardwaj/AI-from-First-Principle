@@ -11,18 +11,22 @@ def SentinelLinearSearch(arr, target):
     n = len(arr)
     last = arr[n-1]
     arr[n-1] = target
-    # 2. index
+    # 2. search for target
     i = 0
     while(arr[i] != target):
         i += 1
-        
+    
+    # 3. restore the the last element
     arr[n-1] = last
     if i < n-1 or arr[n-1] == target:
         print(target, "is present at index", i)
     else:
         print("Element not found")
    
-arr = [10, 20, 180, 30, 60, 50, 110, 100, 70] 
-x = 180
 
-print(SentinelLinearSearch(arr, x))
+# Example usage
+
+if __name__ == "__main__":
+    arr = [10, 20, 180, 30, 60, 50, 110, 100, 70] 
+    x = 180
+    print(SentinelLinearSearch(arr, x))

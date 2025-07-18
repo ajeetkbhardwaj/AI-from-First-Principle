@@ -5,3 +5,5 @@ It is the core mathematics of data driven learning model from Theory to Implemen
 https://github.com/hkproj?tab=repositories
 
 https://github.com/explainingai-code
+
+https://michalpitr.substack.com/
