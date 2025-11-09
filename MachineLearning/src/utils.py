@@ -53,3 +53,16 @@ def LabelOneHotEncoding(y, num_classes):
     for i, label in enumerate(y):
         one_hot[i, label] = 1
     return one_hot
+
+
+# ----- Multivariate Normal Distribution PDF -----
+
+def pdf_multivariate_normal_distribution(x, mean, cov):
+    """Compute multivariate normal density function."""
+    d = len(x)
+    cov_det = np.linalg.det(cov)
+    cov_inv = np.linalg.inv(cov)
+    norm_const = 1.0 / np.sqrt((2 * np.pi) ** d * cov_det)
+    x_mu = (x - mean).reshape(1, -1)
+    result = np.exp(-0.5 * x_mu @ cov_inv @ x_mu.T)
+    return float(norm_const * result)
